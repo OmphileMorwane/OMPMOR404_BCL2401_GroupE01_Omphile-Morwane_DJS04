@@ -1,5 +1,14 @@
 import { books, authors, genres, BOOKS_PER_PAGE } from "./data.js";
 
+class BookConnect extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({mode:"open"});
+
+    
+  }
+}
+
 let page = 1;
 let matches = books;
 
