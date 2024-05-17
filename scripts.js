@@ -5,14 +5,17 @@ class BookConnect extends HTMLElement {
     super();
     this.attachShadow({mode:"open"});
 
+    this.page = 1;
+    this.matches = books;
+
+    const link = document.createElement("link");
+    link.setAttribute("rel", "stylesheet");
+    link.setAttribute("href", "./styles.css");
+    this.shadowRoot.appendChild(link);
+
     
-  }
-}
-
-let page = 1;
-let matches = books;
-
 const starting = document.createDocumentFragment();
+
 //Function to create book preview element
 function createBookPreview(book) {
   const { author, id, image, title } = book;
@@ -61,7 +64,7 @@ function updateBookList(bookList) {
 }
 
 // Initial rendering of books
-updateBookList(matches);
+updateBookList(this.matches);
 
 const genreHtml = document.createDocumentFragment();
 const firstGenreElement = document.createElement("option");
@@ -217,4 +220,8 @@ document
 document.querySelector("[data-list-close]").addEventListener("click", () => {
   document.querySelector("[data-list-active]").open = false;
 });
+  }
 
+}
+customElements.define("book-connect", BookConnect);
+  
