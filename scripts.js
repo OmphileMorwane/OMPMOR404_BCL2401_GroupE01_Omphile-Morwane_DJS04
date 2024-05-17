@@ -161,9 +161,9 @@ document
   });
 
 document.querySelector("[data-list-button]").addEventListener("click", () => {
-  const startIndex = page * BOOKS_PER_PAGE;
-  const endIndex = (page + 1) * BOOKS_PER_PAGE;
-  const fragment = renderBooks(matches.slice(startIndex, endIndex));
+  const startIndex = this.page * BOOKS_PER_PAGE;
+  const endIndex = (this.page + 1) * BOOKS_PER_PAGE;
+  const fragment = renderBooks(this.matches.slice(startIndex, endIndex));
   document.querySelector("[data-list-items]").appendChild(fragment);
   page += 1;
 });
