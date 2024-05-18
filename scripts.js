@@ -1,6 +1,9 @@
 import { books, authors, genres, BOOKS_PER_PAGE } from "./data.js";
 
 class BookConnect extends HTMLElement {
+  static get observedAttributes() {
+    return ["author", "image", "id", "title"];
+  }
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
