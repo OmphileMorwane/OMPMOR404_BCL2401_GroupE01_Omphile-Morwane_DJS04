@@ -24,7 +24,7 @@ The "Book Connect" project provides an opportunity for students to refine a full
 5. **Documentation and Comments**: Throughout the refactoring process, document your code. Provide comments that explain the purpose and functionality of objects and functions.
 6. **Adherence to Styleguides**: Ensure your code follows JavaScript and HTML coding standards and best practices for readability and maintainability.
 
-## Discussion and Reflection
+## Discussion and Reflections
 
 I chose to encapsulate the function related to rendering the book preview into a custom web component to promote  code organization. I also used the Shadow DOM within the custom web component ensures encapsulation of styles and DOM structure, preventing style conflicts and enhancing the component's isolation. By defining observed attributes (author, image, id, title) in the bookPreview component, we enable dynamic updates based on attribute changes, enhancing the component's responsiveness. For abstraction, I used a modular design approach, the codebase is structured into distinct functions such as renderBooks, createBookElement, createOptionElement, renderGenres, renderAuthors, setTheme, showMoreBtn, filterBooks, etc. This promotes the separation of concerns, enhancing the maintainability of the codebase. Each function encapsulates a specific set of tasks, facilitating easier debugging, testing, and modification.
 
