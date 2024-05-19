@@ -24,16 +24,15 @@ The "Book Connect" project provides an opportunity for students to refine a full
 5. **Documentation and Comments**: Throughout the refactoring process, document your code. Provide comments that explain the purpose and functionality of objects and functions.
 6. **Adherence to Styleguides**: Ensure your code follows JavaScript and HTML coding standards and best practices for readability and maintainability.
 
-#### Discussion and Reflection
+## Discussion and Reflection
 
-After completing the tasks, prepare a brief presentation for your coaching group on the following:
-- The rationale behind the refactoring decisions made, including the choice of objects and functions.
-- How abstraction has made the code more maintainable and extendable.
-- Any challenges faced during the refactoring process and how they were overcome.
-- Reflections on how this exercise has deepened your understanding of JavaScript programming concepts.
+I chose to encapsulate the function related to rendering the book preview into a custom web component to promote  code organization. I also used the Shadow DOM within the custom web component ensures encapsulation of styles and DOM structure, preventing style conflicts and enhancing the component's isolation. By defining observed attributes (author, image, id, title) in the bookPreview component, we enable dynamic updates based on attribute changes, enhancing the component's responsiveness. For abstraction, I used a modular design approach, the codebase is structured into distinct functions such as renderBooks, createBookElement, createOptionElement, renderGenres, renderAuthors, setTheme, showMoreBtn, filterBooks, etc. This promotes the separation of concerns, enhancing the maintainability of the codebase. Each function encapsulates a specific set of tasks, facilitating easier debugging, testing, and modification.
 
-#### Submission Guidelines
+## Challenges faced
 
-Submit the refactored version of the "Book Connect" application, including all HTML, CSS, and JavaScript files. Ensure that your code is well-documented and adheres to the specified Styleguides. Include a written report covering the discussion and reflection points outlined above.
+I had a limited amount of time to grasp the web component concept. I understand the concpet but not to the extend of applying it. I spent a lot of time trying to apply all the bits and snippets that I grasped from the external resources like YouTube and the LMS content. I understood the LMS contenct but the information was a lot for me to grasp in two days. My code did not work after incapsulating, I had to change a few codes to make it work. There was a point where I had to start all over again and as I was refractoring, it worked and I stopped working on the code.
 
-Make sure to submit your project to the LMS on the DJS03 Project Tab.
+## Reflections
+
+This project showed me how much I still need to work on, but as Abstractions and web components were abit of new concepts, I don't put too much pressure on myself as I will give myself more time to understand then so that I can be able to apply them in the future.
+
